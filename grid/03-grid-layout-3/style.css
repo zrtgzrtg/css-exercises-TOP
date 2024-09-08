@@ -5,6 +5,9 @@
 
 .container {
   text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  gap: 4px;
 }
 
 .container div {
@@ -17,8 +20,22 @@
 
 .header {
   background-color: #393f4d;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
-
+.header {
+  grid-column: 1 / -1;
+  justify-items: left;
+  align-items: center;
+}
+.menu {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.menu > ul {
+  display: grid;
+  grid-template-columns: subgrid;
+}
 .menu ul,
 .menu li {
   font-size: 16px;
